@@ -47,6 +47,10 @@ def prepositionalPhrase():
 
     """Builds and returns a prepositional phrase."""
 
+    with open('prepositions.txt') as p:
+        preposition = csv.reader(p)
+        prepositions = random.choice(list(preposition))
+
     return random.choice(prepositions) + " " + nounPhrase()
 
 def main():
