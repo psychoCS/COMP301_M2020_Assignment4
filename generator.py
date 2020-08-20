@@ -9,8 +9,7 @@ Purpose: Generates and displays sentences using simple grammar and vocabulary. W
 import csv
 import random
 
-# articles = ("A","AN", "THE") - Random version working
-# nouns = ("BOY", "GIRL", "BAT", "BALL","MAN","OCEAN","HOUSE","BIRD","BED","CAT","MILK",)
+# list of articles, nouns, verbs and prepositions taken from eslgrammar.org
 
 verbs = ("HIT", "SAW", "LIKED")
 prepositions = ("WITH", "BY")
@@ -38,6 +37,9 @@ def nounPhrase():
 def verbPhrase():
 
     """Builds and returns a verb phrase."""
+    with open('verbs.txt') as v:
+        verb = csv.reader(v)
+        verbs = random.choice(list(verb)) 
 
     return random.choice(verbs) + " " + nounPhrase() + " " + prepositionalPhrase()
 
