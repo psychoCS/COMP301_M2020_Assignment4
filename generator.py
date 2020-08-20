@@ -17,7 +17,7 @@ def sentence():
     if optional == 'yes':
         return nounPhrase() + " " + verbPhrase()
     if optional == 'no':
-        return nounPhrase() + " " + verbPhrase() + " " +  conjuction() + " " + nounPhrase() + " " + verbPhrase()     
+        return nounPhrase() + " " + verbPhrase() + " " +  conjunction() + " " + nounPhrase() + " " + verbPhrase()     
 
 
 def nounPhrase():
